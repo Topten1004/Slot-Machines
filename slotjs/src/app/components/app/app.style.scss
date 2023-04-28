@@ -1,0 +1,49 @@
+@import '../../styles/mixins/media-queries';
+
+.app {
+    &__base {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        user-select: none;
+        font-size: 16px;
+        line-height: 16px;
+        overflow: hidden;
+    }
+
+    &__main {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1 0 auto;
+        padding: 16px;
+        height: 0;
+    }
+
+    &__coverLeft,
+    &__coverRight {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        z-index: 20;
+        width: calc((100vw - 800px) / 2);
+        transform: translateZ(0);
+        display: none;
+        pointer-events: none;
+
+        @include above(xl) {
+            display: block;
+        }
+    }
+
+    &__coverLeft {
+        left: 0;
+        background: linear-gradient(to right, #fff 20%, rgba(255, 255, 255, 0));
+    }
+
+    &__coverRight {
+        right: 0;
+        background: linear-gradient(to left, #fff 20%, rgba(255, 255, 255, 0));
+    }
+}

@@ -1,0 +1,12 @@
+* { box-sizing: border-box; }
+
+html,
+body { padding: 0; margin: 0; }
+
+.app { display: flex; position: relative; flex-direction: column; margin: 20px auto 20px auto; width: 600px; min-height: 600px; border: 5px solid #49ccf9; padding: 20px; }
+
+/* responsive
+============================ */
+@media screen and (max-width: 767px) { 
+    .app { width: 100%; margin: 0; }
+}

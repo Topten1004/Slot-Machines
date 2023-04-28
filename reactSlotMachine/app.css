@@ -1,0 +1,19 @@
+.body, body{
+    background-color: black;
+    color:antiquewhite;
+}
+
+
+.row {
+    border: 5px solid red;
+    font-size: 50px;
+}
+
+.win {
+    background-color: blue;
+}
+
+.loose {
+background-color: red;
+}
+
